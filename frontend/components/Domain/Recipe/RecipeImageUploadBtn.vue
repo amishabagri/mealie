@@ -1,4 +1,6 @@
+
  <template>
+  <div class = "text-center">
   <v-menu v-model="menu" offset-y top nudge-top="6" :close-on-content-click="false">
     <template #activator="{ on, attrs }">
       <v-btn color="accent" dark v-bind="attrs" v-on="on">
@@ -35,6 +37,7 @@
       </v-card-text>
     </v-card>
   </v-menu>
+</div>
 </template>
 
 <script lang="ts">
@@ -65,7 +68,7 @@ export default defineComponent({
    function uploadImage(fileObject: File) {
     try{
        // Check if the file has an acceptable extension
-       const allowedExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
+       const allowedExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp",".heic",".avif"];
       const fileExtension = fileObject.name.split(".").pop()?.toLowerCase();
 
       // If the file extension is not in the allowed extensions list, show an error message
