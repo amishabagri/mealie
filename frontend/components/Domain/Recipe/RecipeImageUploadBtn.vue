@@ -69,7 +69,7 @@ export default defineComponent({
     try{
        // Check if the file has an acceptable extension
        const allowedExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp",".heic",".avif"];
-      const fileExtension = fileObject.name.split(".").pop()?.toLowerCase();
+       const fileExtension = fileObject.name.split(".").pop()?.toLowerCase();
 
       // If the file extension is not in the allowed extensions list, show an error message
       if (!fileExtension || !allowedExtensions.includes(`.${fileExtension}`)) {
